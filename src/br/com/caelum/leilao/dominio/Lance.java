@@ -11,13 +11,11 @@ public class Lance {
 	}
 
 	public Usuario getUsuario() {
-		return usuario;
+		return this.usuario;
 	}
 
 	public double getValor() {
-		return valor;
+		return this.valor;
 	}
-	
-	
 	
 }
