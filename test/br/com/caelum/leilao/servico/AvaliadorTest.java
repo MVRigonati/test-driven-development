@@ -54,4 +54,10 @@ public class AvaliadorTest {
         Assert.assertEquals(mediaEsperada, leiloeiro.getValorMedioLances(), 0.0001);
 	}
 	
+	@Test(expected = RuntimeException.class)
+	public void deveLancarExcecaoParaLeilaoSemLances() {
+		final Avaliador leiloeiro = new Avaliador(this.leilao);
+        leiloeiro.avalia();
+	}
+	
 }

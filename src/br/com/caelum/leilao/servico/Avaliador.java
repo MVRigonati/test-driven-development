@@ -16,6 +16,10 @@ public class Avaliador {
 	
 	public void avalia() {
 		
+		if (this.leilao.getLances().size() == 0) {
+			throw new RuntimeException("Leilao nao possui lances");
+		}
+		
 		final int quantidadeLances = this.leilao.getLances().size();
 		final Lance primeiroLeilao = this.leilao.getLances().get(0);
 		this.maiorValorLance = primeiroLeilao.getValor();
